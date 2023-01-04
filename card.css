@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+h1{
+    background: gray;
+}
+html{
+    background-size: cover;
+}
+body{
+
+    display: grid;
+    place-items: center;
+    height:100vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 247px;
+    height: 360px;
+    margin: 3px;
+    padding: 0.4em;
+    text-align: center;
+    background: #171614;
+    border-radius: .8em;
+    color: #858585;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+}
+.card img{
+    position: relative;
+    width: 100px;
+    height: 80px;
+    top: 10px;
+    left: calc(50% -50%px);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.card:hover{
+    color: #fff;
+}
+.container{
+    display: grid;
+    place-items: center;
+    position: relative;
+    width: 267px;
+    height: 365px;
+    border-radius: 0.6em ;
+    background: linear-gradient(50deg ,#2a5a3b , #050265);
+    overflow: hidden;
+    animation: wave 4s infinite linear;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 35px;
+    top:0;
+    right: 35px;
+    transition: 1.9s;
+    background: linear-gradient(50deg, #00ff59 , #0568e1);
+    transform:rotate(-45deg) translate(0, -100px);
+}
+
+
+.container:hover::before{
+    animation: cardEffect 5s;
+}
+
+@keyframes cardEffect{
+    100%{
+        transform: rotate(-45deg)  translate(0,450px);
+    }
+}
+@keyframes wave{
+    0%{
+        transform: translate(-0% ,-25%);
+    }
+    50%{
+        transform: translate(-2% ,-5%);
+    }
+    75%{
+        transform: translate(-3% ,-5%);
+    }
+    100%{
+        transform: translate(-5% ,-5%);
+    }
+}
+.container:hover .container:before,
+.container:hover .container:after{
+    top: -45%;
+    
+}

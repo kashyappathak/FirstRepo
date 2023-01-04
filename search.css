@@ -1,0 +1,67 @@
+html{
+    background-size: cover;
+}
+label{
+    color: black;
+    display: block;
+    box-sizing: border-box;
+}
+h1{
+    width: 90%;
+    margin: 0;
+    color: blue;
+    place-items: center;
+    text-align: center;
+    justify-content: center;
+    background: rgb(219, 243, 4);
+    box-shadow: 20px 20px 20px 5px rgba(0,0,0,0.7); 
+}
+.search{
+    width: 1000px;
+    display: block;
+    margin:60px;
+    padding: 2px;
+    animation:  wave 4s infinite linear;
+}
+#gen{
+    background-color: #ccb695;
+    border: none;
+    cursor: pointer;
+    border-radius: 500px;
+    border: 2px solid black
+}
+#gen:hover{
+    background-color: rgb(87, 241, 236);
+    border: 2px solid blue;
+}
+.show{
+    margin-top: 20px;
+    background-color: #c7f5f5;
+    width:10%;
+    height: 10%;
+}
+.com{
+    margin: 10px 10px ;
+    padding: 10px 10px;
+    background-color: #f5f5f1;
+    border: 1px solid black;
+}
+@keyframes wave{
+    0%{
+        transform: translate(-0% ,-55%);
+    }
+    50%{
+        transform: translate(-5% ,-5%);
+    }
+    75%{
+        transform: translate(-5% ,-5%);
+    }
+    100%{
+        transform: translate(-5% ,-5%);
+    }
+}
+.search:hover .search:before,
+.search:hover .search:after{
+    top: -45%;
+    
+}

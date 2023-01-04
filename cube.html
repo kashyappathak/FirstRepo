@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width ,initial-scale=1.0"/>
+        <link rel="stylesheet" href="./css/cube.css"/>
+        <title>CubeCounter</title>
+    </head>
+    <body style="background-image: url('./images/ek.jpg');">
+        <div class="container">
+            <h1 id="title">Kashyap CubeCounter</h1><br>
+            <h1 id="cuberesult"><br>
+            <label>Enter The Number:</label>
+            <input type="text" placeholder="Enter A number:" id="number" required>
+            <button class="btn" onclick="cube()" required>Calculate the cube</button>
+            <button  class="btn" onclick="changeColor()" required>Change the color</button>
+        </div>
+
+        <script>
+            function changeColor(){
+                console.log("please Change the color of Heading")
+                alert("Color is Change")
+                document.getElementById('title').style.color='black'
+    
+            }
+            function container(){
+                document.getElementById('container').style.color='red'
+            }
+            
+
+            function cube(){
+                alert("The No Of cube Is here")
+                let number=document.getElementById('number').value;
+                let result= number*number*number;
+                document.getElementById('cuberesult').innerHTML=result;
+                document.getElementById('cuberesult').style.color='black'
+            }
+        </script>
+    </body>
+</html>

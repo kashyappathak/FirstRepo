@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1 style="background-image: url('./images/ksp.png');")>My Details</h1>
+        <style>
+            #Intro{
+              text-align: center;
+              background: rgb(119, 121, 118);
+              border: 3px solid black;
+              border-radius: 10px;
+              box-shadow: 25px 20px 20px 5px rgba(204, 166, 166, 0.7);;
+              width: 90%;
+              margin: 40px;
+              animation:  wave 4s infinite linear;
+              background-size: cover;
+              font-size: 20px;
+            }
+            body{
+                background-size: cover;
+            }
+            h1{
+                border: 3px solid black;
+                border-radius: 20px;
+               box-shadow: 25px 20px 20px 5px rgba(204, 166, 166, 0.7);;
+               width: 90%;
+               margin: 40px;
+               animation:  wave 4s infinite linear;
+               text-align: center;
+            }
+            .btn{
+                border: 3px solid black;
+                border-radius: 10px;
+                background-color: rgb(119, 119, 226);
+                color: burlywood;
+                width: 30%;
+	            margin: 10px;
+	            padding: 5px;
+               transition: ease-in-out;
+               font-size: 20px;
+            }
+            .btn:hover{
+                border: 3px solid rgb(61, 43, 43);
+                background-color: rgb(216, 29, 29);
+                color: mediumaquamarine;
+            }
+            p{
+                border: 3px solid rgb(34, 33, 33);
+                border-radius: 40px;
+            }
+            @keyframes wave{
+                 0%{
+                transform: translate(-0% ,-25%);
+                }
+                50%{
+                transform: translate(-3% ,-5%);
+               }
+              75%{
+              transform: translate(-2% ,-5%);
+              }
+               100%{
+              transform: translate(-5% ,-5%);
+            }
+           }
+           .container:hover .container:before,
+          .container:hover .container:after{
+          top: -45%;
+    
+         }
+        </style>
+    </head>
+    <body style="background-image: url('./images/ek.jpg');">
+        <details id="Intro" style="background-image: url('./images/kashyap.jpg');">
+            <p style="background: cadetblue;"><strong>My Name Is Kashyap Pathak. I Am From Rajkot. I Am 20 Years Old.</strong></p> 
+            <p style="background: burlywood;"><strong> I Pursuing My B.tech Degree In Information And Communication  Technology Department At Marwadi University</strong></p>
+            <p style="background: chocolate;"><strong>I Am In 5th sem. <br>This Course Duration Is 4 Year.<br>I passout ssc Board Exam with 90.20PR I choose Science engeenering. And In 12th HSc 68PR .</strong></p>
+            <p style="background: cyan;"><strong> My Hobby is swimming ,play game, coding<br> My intrest in fullstack Webdevlopment, hacking, Android App. Dev ,Game Dev.,etc...</strong>  </p>
+            <button type="submit" class="btn" onclick="MuFunc()">Color Change</button>
+        </details>
+        <script>
+            function MuFunc(){
+                alert("Color is Changed");
+                document.getElementById('Intro').style.color = 'white';
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<div class="container">
+	<h1 style="text-align:center ">Register Here</h1>
+	<style>
+	 h1{
+	 	background-color: lightgreen;
+	 	color: red;
+
+	 }
+	 form{
+	 	background-color: lightblue;
+	 	opacity: 1;
+	 	margin: auto;
+	 	width: 40%;
+	 	padding: 16px;
+	 	background-color: lightblue;
+	 	box-shadow: 20px 20px 20px 0px rgba(0,0,0,0.7);
+	 	transition: width 2s, height 4s;
+	 }
+	 form:hover{
+	 	width: 1000px;
+        height: 250px;
+
+	 }
+	 label{
+	 	color:coral ;
+	 	display:block;
+	
+	 }
+	 button{
+	 	background-color: whitesmoke;
+	 	box-shadow: 20px 20px 20px 0px rgba(0,0,0,0.7);
+	 }
+    </style>
+	<form style="text-align:center" >
+		<div class="form-group">
+			<label for="first name">First name:</label>
+			<input type="text" name="first name" class="form-control" ngModel required>
+		</div>	
+		<pre></pre>
+		<div class="form-group">
+			<label for="last name">Last name:</label>
+			<input type="text" name="first name" class="form-control"ngModel required>
+		</div>
+		<pre></pre>
+		<div class="form-group">
+			<label for="Email">Email:</label>
+			<input type="text" name="Email" class="form-control" ngModel required>
+		</div>	
+		<pre></pre>
+
+		<div class="form-group">
+			<label for="password">Password:</label>
+			<input type="text" name="password" class="form-control" ngModel>
+		</div>	
+		<pre></pre>
+		<button class="btn btn-primary" type="submit">Register</button>
+	</form>	
+</div>	

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" style="background-image: url('./images/pro.jpg'); ">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width ,initial-scale=1.0"/>
+        <link rel="stylesheet" href="./css/search.css">
+        <title>Table Generator</title>
+    </head>
+    <body>
+        <div class="search">
+            <h1 id="title">Kashyap Multiplication Table Generator</h1><br>
+            <h1 id="Multiplicationresult">
+            <label for="in"  id="label" >Enter The Number:</label>
+            <input type="number"  class="com" placeholder="Enter A number:" id="num" required><br>
+            <input type="number"  class="times com" placeholder="How many times?"  required><br>
+            <button type="submit" id="gen" class="com" required>Generate A table</button>
+            <button type="submit"  id= "gen" class="com" onclick="changeColor()" required>Color change</button>
+        </div>
+        <div class="show"></div>
+
+        <script>
+            const num=document.querySelector("#num");
+            const btn=document.querySelector("#gen");
+            const show=document.querySelector(".show");
+            const times=document.querySelector(".times");
+            btn.addEventListener("click",() =>{
+                let t = times.value;
+                show.innerHTML=null;
+                let n = num.value;
+                console.log(n);
+                for(let i=1; i<t; i++){
+                    let a =`${n} * ${i} = ${n*i}<br>`;
+                    show.innerHTML +=a;
+                }
+                alert("please Enter The number")
+            })
+
+            function changeColor(){
+
+                alert("label color should be change");
+                document.getElementById('title').style.color = 'black'
+                document.getElementById('label').style.color = 'blue'
+            }
+        </script>
+    </body>
+</html>
